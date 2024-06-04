@@ -1,18 +1,28 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 800px;
+    width: 800px;
+}
+
 .row {
     display: flex;
-    background-color: blue;
+
+    flex: 1 1 auto;
 }
 
+/* base square formatting */
 .square {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+
     border: 2px solid grey;
-    width: 50px;
-    height: 50px;
+
     background-color: white;
 }
-
+/* extra formatting for when square is darkened */
 .darkened {
     background-color: black;
 }
