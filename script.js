@@ -24,9 +24,17 @@ function createGrid(gridSize) {
     }
 }
 
+//checks validity user's requested grid size
+function handleGridSizeInput(inputString) {
+    if (inputString <= 100 && inputString > 0) createGrid(inputString);
+    else {
+        alert("Requested grid size not recognized");
+    }
+}
+
 //add event listener to the grid creation button
 document.querySelector("#grid-creation-btn").addEventListener("click",
- () => createGrid(prompt("Enter grid size (Max 100)"))
+ () => handleGridSizeInput(prompt("Enter grid size (Max 100)"))
 );
 
 //initialize grid on 
