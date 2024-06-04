@@ -17,5 +17,6 @@ for (let i = 0; i < gridSize; i++) {
         let square = document.createElement("div");
         square.classList.add("square");
         row.appendChild(square);
+        square.addEventListener("mouseenter", () => square.classList.add("darkened"));
     }
 }
